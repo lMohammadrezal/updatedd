@@ -1,5 +1,5 @@
 {
-  "homepage": "https://lMohammadrezal.github.io/updatedd",
+
   "name": "project1",
   "version": "0.1.0",
   "private": true,
@@ -17,7 +17,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
+    "clean": "rm -rf build",
+    "predeploy": "npm run clean && npm run build",
     "deploy": "gh-pages -d build --repo https://github.com/lMohammadrezal/updatedd.git",
     "build": "react-scripts build",
     "test": "react-scripts test",
