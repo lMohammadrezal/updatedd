@@ -17,7 +17,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "clean": "rm -rf build",
     "predeploy": "npm run clean && npm run build",
     "deploy": "gh-pages -d build --repo https://github.com/lMohammadrezal/updatedd.git",
     "build": "react-scripts build",

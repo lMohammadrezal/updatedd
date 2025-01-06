@@ -34,7 +34,7 @@ const App = () => {
   return (
     <div className={language === "fa" ? "farsi_font" : ""}>
       <AuthProvider>
-        <BrowserRouter basename="updatedd">
+        <BrowserRouter >
           <Routes>
             {/* Login route without layout */}
             <Route path="/login" element={<Login/>} />
