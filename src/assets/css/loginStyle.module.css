@@ -16,8 +16,8 @@
 }
 .Login_ring {
   position: relative;
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +62,7 @@
 }
 .Login_part {
   position: absolute;
-  width: 300px;
+  width:400px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -81,7 +81,8 @@
 .Login_part .Login_input input {
   position: relative;
   width: 100%;
-  padding: 12px 20px;
+  padding: 12px 40px;
+  margin: 10px;
   background: transparent;
   border: 2px solid #fff;
   border-radius: 40px;
