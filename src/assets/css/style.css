@@ -565,7 +565,7 @@ body[data-theme="dark"] .menu-item,
 body[data-theme="dark"] .testimonial-item {
   background-color: #242933;
 }
-*/ body .service-item,
+body .service-item,
 body .team-item,
 body .menu-item {
   background-color: transparent;
