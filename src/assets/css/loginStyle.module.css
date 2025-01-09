@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
-.Login{
+.Login {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
 }
-.Login_body{
+
+.Login_body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,37 +13,45 @@
   background: #111;
   width: 100%;
   overflow: hidden;
+  padding: 20px; /* Added padding for better responsiveness */
 }
+
 .Login_ring {
   position: relative;
-  width: 600px;
-  height: 600px;
+  width: 700px; /* Adjusted size for better centering */
+  height: 700px; /* Adjusted size for better centering */
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .Login_ring i {
   position: absolute;
   inset: 0;
   border: 2px solid #fff;
   transition: 0.5s;
 }
+
 .Login_ring i:nth-child(1) {
   border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
   animation: animate 6s linear infinite;
 }
+
 .Login_ring i:nth-child(2) {
-  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
   animation: animate 4s linear infinite;
 }
+
 .Login_ring i:nth-child(3) {
-  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
   animation: animate2 10s linear infinite;
 }
+
 .Login_ring:hover i {
   border: 6px solid var(--clr);
   filter: drop-shadow(0 0 20px var(--clr));
 }
+
 @keyframes animate {
   0% {
     transform: rotate(0deg);
@@ -52,6 +60,7 @@
     transform: rotate(360deg);
   }
 }
+
 @keyframes animate2 {
   0% {
     transform: rotate(360deg);
@@ -60,29 +69,36 @@
     transform: rotate(0deg);
   }
 }
+
 .Login_part {
   position: absolute;
-  width:400px;
-  height: 100%;
+  width: 400px;
+  height: auto; /* Changed to auto for better centering */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  padding: 20px; /* Added padding for cleaner layout */
 }
+
 .Login_part h2 {
   font-size: 2em;
   color: #fff;
+  margin-bottom: 10px; /* Added spacing below heading */
 }
+
 .Login_part .Login_input {
   position: relative;
   width: 100%;
+  margin-bottom: 15px; /* Adjusted spacing between inputs */
 }
+
 .Login_part .Login_input input {
   position: relative;
   width: 100%;
   padding: 12px 40px;
-  margin: 10px;
+  margin: 10px 0; /* Adjusted margins for cleaner alignment */
   background: transparent;
   border: 2px solid #fff;
   border-radius: 40px;
@@ -91,6 +107,7 @@
   box-shadow: none;
   outline: none;
 }
+
 .Login_part .Login_input input[type="submit"] {
   width: 100%;
   background: #0078ff;
@@ -98,9 +115,11 @@
   border: none;
   cursor: pointer;
 }
+
 .Login_part .Login_input input::placeholder {
   color: rgba(255, 255, 255, 0.75);
 }
+
 .Login_part .links {
   position: relative;
   width: 100%;
@@ -108,8 +127,32 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  margin-top: 10px; /* Added spacing above links */
 }
+
 .Login_part .links a {
   color: #fff;
   text-decoration: none;
+}
+
+/* Password Hints */
+.passwordHints {
+  list-style: none;
+  margin: 10px 0 0; /* Adjusted spacing for better alignment */
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.hintValid {
+  color: #00ff0a;
+}
+
+.hintInvalid {
+  color: #ff0057;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 5px; /* Added spacing for better readability */
 }

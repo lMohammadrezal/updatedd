@@ -3,10 +3,11 @@ import React, { createContext, useState } from "react";
 const LoadingContext = createContext();
 
 export const LoadingProvider = ({ children }) => {
-  const [loading, setLoading] = useState(true);
+  const[globalLoading,setGlobalLoading]=useState(true)
+  const [loading, setLoading] = useState(false);
  
   return (
-    <LoadingContext.Provider value={{loading,setLoading}}>
+    <LoadingContext.Provider value={{loading,setLoading,globalLoading,setGlobalLoading}}>
       {children}
     </LoadingContext.Provider>
   );

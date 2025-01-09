@@ -117,7 +117,9 @@ const HomeHeader = () => {
             </Link>
           </div>
           <div className="d-flex align-items-center">
-            <Link to="/booking" className={`btn btn-primary py-2 px-4 me-3 ${language==="fa"?"farsi_font":""}`}>
+            <Link to="/booking" className={`btn btn-primary py-2 px-4 me-3 ${language==="fa"?"rounded-3":""}`}
+            style={{fontFamily:`${language==="fa"?"Rubik":""}`,fontWeight:`${language==="fa"?"900":""}`,margin:`${language==="fa"?"10px":""}`}}
+            >
               {translations[language].book_a_table}
             </Link>
             {/* Dark Mode Toggle */}
@@ -155,7 +157,10 @@ const HomeHeader = () => {
             <div  className="col-lg-6 text-center text-lg-start" >
               {/* ................................ */}
 
-              <h1 className={`display-3 text-white animated slideInLeft ${language==="fa"?"farsi_font text-end":""}`} >
+              <h1 className={`display-3 text-white animated slideInLeft ${language==="fa"?"farsi_font text-end":""}`}
+               data-aos={`${language==="fa"?"fade-left":"fade-right"}`} data-aos-duration="1000" data-aos-easing="linear"
+              
+               >
                 {language === "fa" ? (
                   "از وعده‌های خوشمزه ما لذت ببرید"
                 ) : (
@@ -166,7 +171,9 @@ const HomeHeader = () => {
                 )}
               </h1>
 
-              <p className={`text-white animated slideInLeft mb-4 pb-2 ${language==="fa"?" farsi-font text-end":""}`} >
+              <p className={`text-white animated slideInLeft mb-4 pb-2 ${language==="fa"?" farsi_font_md text-end":""}`}
+              data-aos={`${language==="fa"?"fade-left":"fade-right"}`} data-aos-duration="1000" data-aos-easing="linear"
+              >
                 {language === "fa"
                   ? "رستوران ما با ارائه انواع غذاهای خوشمزه و لذیذ، آماده است تا تجربه‌ای فراموش‌نشدنی برای شما رقم بزند. از طعم‌های اصیل گرفته تا جدیدترین دستورهای غذایی، همه چیز برای رضایت شما آماده است."
                   : "Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet"}
@@ -176,12 +183,14 @@ const HomeHeader = () => {
               <Link
               
                 to="/booking"
-                className={`btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft ${language==="fa"?"farsi_font":""}`}
+                className={`btn btn-primary py-sm-3 px-sm-5 me-3 ${language==="fa"?"rounded-3":""}`}
+                style={{fontFamily:`${language==="fa"?"Rubik":""}`,fontSize:`${language==="fa"?"18px":""}`,fontWeight:`${language==="fa"?"900":""}`}}
+                data-aos={`${language==="fa"?"fade-left":"fade-right"}`} data-aos-duration="1500" data-aos-delay="500"
               >
                 {translations[language].book_a_table}
               </Link>
             </div>
-            <div className="col-lg-6 text-center text-lg-end overflow-hidden">
+            <div className="col-lg-6 text-center text-lg-end overflow-hidden" data-aos={`${language==="fa"?"fade-right":"fade-left"}` } data-aos-duration="1500">
               <img className="img-fluid" src={heroImage} alt="Hero" />
             </div>
           </div>
@@ -191,4 +200,4 @@ const HomeHeader = () => {
   );
 };
 
-export default HomeHeader;
+export default HomeHeader;  

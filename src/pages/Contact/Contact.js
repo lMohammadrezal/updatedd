@@ -156,10 +156,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="container dark-mode" dir="ltr">
+    <div className="container dark-mode" dir="ltr" data-aos="fade-up" data-aos-duration="1500">
       <div className="text-center">
         <h5 className={`section-title text-primary ${language==="fa"?"farsi_font":""}`}>{translations[language].contact_us}</h5>
-        <h1 className={`mb-5 ${language==="fa"?"farsi_font":""}`}>{translations[language].contact_us_for_any_query}</h1>
+        <h1 className={`mb-5 ${language==="fa"?"farsi_font":""}`}
+           data-aos="zoom-out" data-aos-duration="1500"
+        >{translations[language].contact_us_for_any_query}</h1>
       </div>
 
       <div className="row">
@@ -264,7 +266,10 @@ const Contact = () => {
               </div>
 
               <div className="col-12">
-                <button className={`btn btn-primary w-100 py-3 ${language==="fa"?"farsi_font":""}`} type="submit">
+                <button className={`btn btn-primary w-100 py-3 ${language==="fa"?"rounded-3":""}`} type="submit"
+                            style={{fontFamily:`${language==="fa"?"Rubik":""}`,fontWeight:`${language==="fa"?"900":""}`}}
+                            >
+                       
                   {translations[language].send_message}
                 </button>
               </div>

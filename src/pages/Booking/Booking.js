@@ -6,7 +6,7 @@ const Booking = () => {
     <div>
       <div
         className="container-xxl py-5 px-0 wow fadeInUp"
-        data-wow-delay="0.1s"
+          data-aos="fade-up" data-aos-duration="1500"
       >
         <div className="row g-0">
           <div className="col-md-6">

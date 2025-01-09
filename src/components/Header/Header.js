@@ -2,8 +2,9 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ThemeContext } from "../../Context/ThemeContext";
 import LanguageContext from "../../Context/LanguageContext";
-
 const Header = () => {
+
+
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
@@ -74,10 +75,13 @@ const Header = () => {
     };
   }, []);
 
+  
+
   // Function to toggle language
   const toggleLanguage = () => {
     setLanguage(language === "en" ? "fa" : "en");
   };
+
 
   return (
     <div>
@@ -141,6 +145,7 @@ const Header = () => {
                   className={`dropdown-menu m-0 ${
                     isDropdownOpen ? "show" : ""
                   }`}
+           
                 >
                   <Link to="/booking" className="dropdown-item">
                     {translations[language].booking}
@@ -161,8 +166,9 @@ const Header = () => {
               <Link
                 to="/booking"
                 className={`btn btn-primary py-2 px-4 me-3 ${
-                  language === "fa" ? "farsi_font" : ""
+                  language === "fa" ? "rounded-3" : ""
                 }`}
+                style={{fontFamily:`${language==="fa"?"Rubik":""}`,fontWeight:`${language==="fa"?"900":""}`,margin:`${language==="fa"?"10px":""}`}}
               >
                 {translations[language].book_a_table}
               </Link>
@@ -198,10 +204,11 @@ const Header = () => {
         {/* Hero Section */}
         <div className="container-xxl py-5 bg-dark hero-header mb-5">
           <div className="container text-center my-5 pt-5 pb-4">
-            <h1
+            <h1 
               className={`display-3 text-white mb-3 animated slideInDown ${
                 language === "fa" ? "farsi_font" : ""
               }`}
+                // data-aos="fade-up" .............................
             >
               {PageText[0]}
             </h1>

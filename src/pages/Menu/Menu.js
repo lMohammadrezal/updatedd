@@ -135,13 +135,18 @@ const Menu = () => {
 
   return (
     <div>
-      <div className="container-xxl py-5">
+      <div className="container-xxl py-5"
+       data-aos="fade-up"
+       data-aos-duration="1500"
+      >
         <div className="container">
           <div className="text-center">
             <h5 className={`section-title ff-secondary text-center text-primary fw-normal ${language==="fa"?"farsi_font":""}`}>
               {translations[language].food_menu}
             </h5>
-            <h1 className={`mb-5 ${language==="fa"?"farsi_font":""}`}>
+            <h1 className={`mb-5 ${language==="fa"?"farsi_font":""}`}
+              data-aos="zoom-out" data-aos-duration="1500"
+            >
               {translations[language].most_popular_items}
             </h1>
           </div>
@@ -155,7 +160,7 @@ const Menu = () => {
               >
                 <input
                   type="text"
-                  className={`form-control search-bar-input ${language==="fa"?"farsi_font":""}`}
+                  className={`form-control search-bar-input ${language==="fa"?"farsi_font_md":""}`}
                   placeholder={translations[language].search_for_menu_items}
                   value={searchQuery}
                   onChange={handleSearch}
@@ -199,14 +204,14 @@ const Menu = () => {
                       {language==="fa"
                       ?(
                       <>
-                        <h6 className={`mt-n1 mb-0 ${language==="fa"?"farsi_font":""}`}>
+                        <h6 className={`mt-n1 mb-0 ${language==="fa"?"farsi_font_md":""}`}>
                         {tab === "breakfast"
                           ? "صبحانه"
                           : tab === "lunch"
                           ? "ناهار"
                           : "شام"}
                       </h6>
-                      <small className="text-body">
+                      <small className={`text-body ${language==="fa"?"farsi_font_sm":""}`}>
                         {tab === "breakfast"
                           ? "پر طرفدار"
                           : tab === "lunch"

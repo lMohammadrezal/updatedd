@@ -131,10 +131,12 @@ const BookingForm = () => {
     <Fragment>
       <div className="col-md-6 bg-dark d-flex align-items-center">
         <div className="p-5 wow fadeInUp" data-wow-delay="0.2s">
-          <h5 className={`section-title ff-secondary text-start text-primary fw-normal ${language==="fa"?"farsi_font":""}`}>
+          <h5 className={`section-title ff-secondary  text-primary fw-normal ${language==="fa"?"farsi_font_sm text-end":"text-start"}`}>
             {translations[language].reservation}
           </h5>
-          <h1 className={`text-white mb-4 ${language==="fa"?"farsi_font":""}`}>{translations[language].book_a_table_online}</h1>
+          <h1 className={`text-white mb-4 ${language==="fa"?"farsi_font_md":""}`}
+            data-aos={`${language==="fa"?"fade-left":"fade-right"}`} data-aos-duration="1500"
+          >{translations[language].book_a_table_online}</h1>
           <form onSubmit={handleSubmit}>
             <div className="row g-3">
               <div className="col-md-6">
@@ -147,7 +149,7 @@ const BookingForm = () => {
                     value={formData.name}
                     onChange={handleChange}
                   />
-                  <label htmlFor="name">{translations[language].your_name}</label>
+                  <label htmlFor="name" className={`${language==="fa"?"farsi_font_md":""}`}>{translations[language].your_name}</label>
                   {errors.name && <div className="invalid-feedback">{errors.name}</div>}
                 </div>
               </div>
@@ -161,7 +163,7 @@ const BookingForm = () => {
                     value={formData.email}
                     onChange={handleChange}
                   />
-                  <label htmlFor="email">{translations[language].your_email}</label>
+                  <label htmlFor="email" className={`${language==="fa"?"farsi_font_md":""}`}>{translations[language].your_email}</label>
                   {errors.email && <div className="invalid-feedback">{errors.email}</div>}
                 </div>
               </div>
@@ -174,7 +176,7 @@ const BookingForm = () => {
                     value={formData.datetime}
                     onChange={handleChange}
                   />
-                  <label htmlFor="datetime">{translations[language].date_and_time}</label>
+                  <label htmlFor="datetime" className={`${language==="fa"?"farsi_font_md":""}`}>{translations[language].date_and_time}</label>
                   {errors.datetime && (
                     <div className="invalid-feedback">{errors.datetime}</div>
                   )}
@@ -183,7 +185,7 @@ const BookingForm = () => {
               <div className="col-md-6">
                 <div className="form-floating">
                   <select
-                    className={`form-select ${language==="fa"?"farsi_font":""}`}
+                    className={`form-select ${language==="fa"?"farsi_font_md":""}`}
                     id="people"
                     value={formData.people}
                     onChange={handleChange}
@@ -194,7 +196,7 @@ const BookingForm = () => {
                     <option value="4">{language==="fa"?"۴ نفر"  :"People 4"}</option>
                     <option value="5">{language==="fa"?"۵ نفر"    :"People 5"}</option>
                   </select>
-                  <label htmlFor="people">{translations[language].no_of_people}</label>
+                  <label htmlFor="people" className={`${language==="fa"?"farsi_font_md":""}`}>{translations[language].no_of_people}</label>
                 </div>
               </div>
               <div className="col-12">
@@ -207,14 +209,16 @@ const BookingForm = () => {
                     value={formData.message}
                     onChange={handleChange}
                   ></textarea>
-                  <label htmlFor="message">{translations[language].special_request}</label>
+                  <label htmlFor="message" className={`${language==="fa"?"farsi_font_md":""}`}>{translations[language].special_request}</label>
                   {errors.message && (
                     <div className="invalid-feedback">{errors.message}</div>
                   )}
                 </div>
               </div>
               <div className="col-12">
-                <button className={`btn btn-primary w-100 py-3 ${language==="fa"?"farsi_font":""}`} type="submit">
+                <button className={`btn btn-primary w-100 py-3 ${language==="fa"?"rounded-3":""}`} 
+                style={{fontFamily:`${language==="fa"?"Rubik":""}`,fontWeight:`${language==="fa"?"900":""}`}}
+                type="submit">
                   {translations[language].book_now}
                 </button>
               </div>
