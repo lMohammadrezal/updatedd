@@ -147,8 +147,8 @@ const About = ({ includeTeam = true }) => {
               </div>
               <a className={`btn btn-primary py-3 px-5 mt-2 ${language==="fa"?"rounded-3":""}`} 
               style={{fontFamily:`${language==="fa"?"Rubik":""}`,fontWeight:`${language==="fa"?"900":""}`}}
-              href="#"
-              data-aos={`${language==="fa"?"fade-left":"fade-right"}`}>
+              href="#32"
+              data-aos={`${language==="fa"?"fade-left":"fade-right"}`}> 
                 {translations[language].read_more}
               </a>
             </div>

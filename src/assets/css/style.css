@@ -266,7 +266,7 @@ body[data-theme="dark"] .service-item:hover {
 /* Testimonial Start */
 .testimonial-item p {
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  line-clamp:initial;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
