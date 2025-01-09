@@ -7,7 +7,7 @@ import aboutImage4 from "../../assets/img/about-4.jpg";
 import Team from "../Team/Team";
 import AboutCounter from "./AboutCounter";
 import LanguageContext from "../../Context/LanguageContext";
-import { AOS } from 'aos';
+
 
 const About = ({ includeTeam = true }) => {
   const { language, translations } = useContext(LanguageContext);

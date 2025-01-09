@@ -120,20 +120,6 @@
   color: rgba(255, 255, 255, 0.75);
 }
 
-.Login_part .links {
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  margin-top: 10px; /* Added spacing above links */
-}
-
-.Login_part .links a {
-  color: #fff;
-  text-decoration: none;
-}
 
 /* Password Hints */
 .passwordHints {
